@@ -2,7 +2,9 @@
 
 ![GitHub Logo](public/preview.jpg)
 
-Алгоритм поиска написан в Node.getLowestCommonAncestor()
+На изображении красным отмечены выбранные Node, а синим их общий родитель. 
+
+Алгоритм поиска [getLowestCommonAncestor()](https://github.com/Tihon-Ustinov/lca-multiple-algorithm/blob/main/src/libs/Node.js#L26).
 
 ## Project setup
 ```
