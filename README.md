@@ -26,5 +26,5 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Try online
+See [lca-multiple-algorithm](https://tihon-ustinov.github.io/lca-multiple-algorithm/).
