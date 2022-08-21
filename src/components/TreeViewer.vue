@@ -50,7 +50,7 @@ export default {
     markCommonParents() {
       if (this.tree) {
         let nodes = Array.from(this.selected)
-        this.common = this.tree.getLowestCommonAncestor(nodes)
+        this.common = this.tree.getLowestCommonAncestor2(nodes)
       }
     }
   }

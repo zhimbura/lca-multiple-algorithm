@@ -18,6 +18,13 @@ export class Node {
         parent.addChildren(this)
     }
 
+    getAllChildren() {
+        return [
+            ...this.childNodes,
+            ...this.childNodes.flatMap(child => child.getAllChildren())
+        ]
+    }
+
     /***
      * Находит наименьшего общего родителя для нескольких элементов
      * @param allNodes - Массив выбранных элементов
@@ -44,5 +51,26 @@ export class Node {
                 return null
             }
         }
+    }
+
+    getLowestCommonAncestor2(allNodes) {
+        let mapParentsCount = new Map()
+        let tmpArray = allNodes.slice()
+        while (tmpArray.length > 0) {
+            for (let i = tmpArray.length - 1; i >= 0; i--) {
+                let parent = tmpArray[i]?.parentNode
+                if (!parent) {
+                    tmpArray.splice(i, 1)
+                    continue
+                }
+                let newCount = (mapParentsCount.get(parent) || 0) + 1
+                if (newCount === allNodes.length) {
+                    return parent
+                }
+                mapParentsCount.set(parent, newCount)
+                tmpArray.splice(i, 1, parent)
+            }
+        }
+        return null
     }
 }
