@@ -27,4 +27,4 @@ npm run lint
 ```
 
 ### Try online
-See [lca-multiple-algorithm](https://tihon-ustinov.github.io/lca-multiple-algorithm/).
+See [lca-multiple-algorithm](https://zhimbura.github.io/lca-multiple-algorithm/).
